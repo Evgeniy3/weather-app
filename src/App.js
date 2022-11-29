@@ -14,7 +14,7 @@ function App() {
   const feelTem = Math.floor(temp.feels_like);
 
   useEffect(() => {
-    axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=5c009660099d84e3c1c78bc39efd4e6b&lang=ru&units=metric`)
+    axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3799518c2be530932ced5473e6d5fb6a&lang=ru&units=metric`)
       .then(res => {
         setWeather(res.data.weather[0])
         setTemp(res.data.main)
@@ -24,23 +24,23 @@ function App() {
   }, [city]);
 
   return (
-    <div className='position-absolute top-50 start-50 translate-middle w-50 h-75'>
-      <Card className='w-100 h-75 bg-primary text-white'>
+    <div className=' text-white w-100 h-100'>
+      <Card className='bg-primary position-absolute top-50 start-50 translate-middle h-50'>
           <Card.Body className='position-relative row align-items-center'>
             <div className='d-flex justify-content-between align-items-start'>
               <Card.Title className='ms-5 mt-2'>{city}</Card.Title>
               <Button onClick={() => setShow(true)} className='.text-white me-5'>Город</Button>
             </div>
-            <div className='position-relative mb-5'>
+            <div className='position-relative mb-5 mt-5'>
               <div className='position-absolute top-50 start-50 translate-middle d-flex justify-content-center'>
                 <div className=''>
-                  <Card.Img variant="top" className='' src={`https://openweathermap.org/img/w/${weather.icon}.png`} />
+                  <Card.Img variant="top" className='w-50 h-50' src={`https://openweathermap.org/img/w/${weather.icon}.png`} />
                   <Card.Text className='fs-1 fw-weight-bold ms-2' >{tem}°</Card.Text>
                   <Card.Text className='fs-6 ms-3' >{weather.description}</Card.Text>
                 </div>
               </div>
             </div>
-            <div className='d-flex justify-content-between flex-wrap'>
+            <div className='d-flex justify-content-between flex-wrap mt-5'>
               <Card.Text className='me-3 ms-3' >Ощущается как: {feelTem}°</Card.Text>
               <Card.Text className='me-3 ms-3'>Влажность: {temp.humidity}%</Card.Text>
               <Card.Text className='me-3 ms-3'>Давление: {temp.pressure} мм рт. ст.</Card.Text>
