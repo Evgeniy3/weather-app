@@ -24,8 +24,8 @@ function App() {
   }, [city]);
 
   return (
-    <div className=' text-white w-100 h-100'>
-      <Card className='bg-primary position-absolute top-50 start-50 translate-middle h-50'>
+    <>
+      <Card className='bg-primary position-absolute top-50 start-50 translate-middle w-100 h-100 text-white'>
           <Card.Body className='position-relative row align-items-center'>
             <div className='d-flex justify-content-between align-items-start'>
               <Card.Title className='ms-5 mt-2'>{city}</Card.Title>
@@ -33,10 +33,10 @@ function App() {
             </div>
             <div className='position-relative mb-5 mt-5'>
               <div className='position-absolute top-50 start-50 translate-middle d-flex justify-content-center'>
-                <div className=''>
-                  <Card.Img variant="top" className='w-50 h-50' src={`https://openweathermap.org/img/w/${weather.icon}.png`} />
+                <div>
+                  <Card.Img variant="top" className='w-50 h-50 ms-3' src={`https://openweathermap.org/img/w/${weather.icon}.png`} />
                   <Card.Text className='fs-1 fw-weight-bold ms-2' >{tem}°</Card.Text>
-                  <Card.Text className='fs-6 ms-3' >{weather.description}</Card.Text>
+                  <Card.Text className='fs-6 ms-2' >{weather.description}</Card.Text>
                 </div>
               </div>
             </div>
@@ -85,7 +85,7 @@ function App() {
           </Formik>
         </Modal.Body>
       </Modal>
-    </div>
+      </>
   );
 }
 
