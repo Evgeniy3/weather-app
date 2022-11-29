@@ -2,6 +2,7 @@ import { React, useState, useEffect } from 'react';
 import { Card, Button, Modal, Form } from 'react-bootstrap';
 import { Formik } from 'formik';
 import axios from 'axios'
+import './app.css'
 
 function App() {
   const [weather, setWeather] = useState({});
@@ -24,8 +25,8 @@ function App() {
   }, [city]);
 
   return (
-    <>
-      <Card className='bg-primary position-absolute top-50 start-50 translate-middle w-100 h-100 text-white'>
+    <div>
+      <Card className='bg-primary position-absolute top-50 start-50 translate-middle w-100 h-100 text-white card'>
           <Card.Body className='position-relative row align-items-center'>
             <div className='d-flex justify-content-between align-items-start'>
               <Card.Title className='ms-5 mt-2'>{city}</Card.Title>
@@ -85,7 +86,7 @@ function App() {
           </Formik>
         </Modal.Body>
       </Modal>
-      </>
+      </div>
   );
 }
 
