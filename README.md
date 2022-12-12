@@ -1,9 +1,14 @@
-## Простое приложение прогноза погоды
+#### Описание программы
 
-###  Использовал: 
-React 
-API 
-React Bootstrap
+[**Приложение**](https://weather-app-production-f2c3.up.railway.app/ ) - это простое приложение по прогнозу погоды.
 
-## Запустить: npm start
+##### Использовал:
+ 1. React + redux-toolkit
+ 2. Typescript
+ 3. API openweathemap
+ 4. Formik
+ 5. Axios
+ 6. Scss
+
+
 

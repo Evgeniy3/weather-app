@@ -1,0 +1,30 @@
+@import '../../styles/variables.scss';
+
+.form {
+    position: relative;
+}
+
+.header_input {
+    outline: none;
+    margin-bottom: 5px;
+    padding: 6px 10px 6px 18px;
+    color: var(#{--text-color-default});
+    border-radius: 10px;
+    border: none;
+    background: var(#{--card-background-default});
+}
+
+.header__button {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.search-img {
+    width: 18px;
+    height: 18px;
+}
