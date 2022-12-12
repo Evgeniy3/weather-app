@@ -16,11 +16,11 @@ const Form = (props: Props) => {
 
     useEffect(() => {
         dispatch(fetchCurrentWeather(city));
-    }, [city]);
+    }, [city, dispatch]);
 
     useEffect(() => {
         dispatch(fetchCurrentWeekWeather(city));
-    }, [city]);
+    }, [city, dispatch]);
 
 
     return (
